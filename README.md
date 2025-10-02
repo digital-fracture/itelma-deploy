@@ -2,7 +2,7 @@
 
 ## Ссылки
 
-- [Backend репозиторий](https://digital-fracture/itelma-backend)
+- [Backend репозиторий](https://github.com/digital-fracture/itelma-backend)
 - [Frontend репозиторий](https://github.com/scarlettnik/lct)
 - [Демонстрация](https://lct-chi.vercel.app)
 - [Дополнительные ресурсы](https://drive.google.com/drive/folders/1a9HcEjjYKTA2ni9vWTC7QlA8ipzxdzXS?usp=drive_link)
