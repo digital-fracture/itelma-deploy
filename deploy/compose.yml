@@ -1,0 +1,11 @@
+name: itelma
+
+services:
+  backend:
+    image: registry.gitlab.com/digital-fracture/itelma-backend:latest
+    env_file:
+      - .env
+    volumes:
+      - ../resources:/app/resources
+      - ../storage:/app/storage
+    restart: always

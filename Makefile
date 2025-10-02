@@ -7,7 +7,7 @@ INSTALL_FILES := \
 	$(DEPLOY_DIR)/compose.dev.yml \
 	$(DEPLOY_DIR)/.env.example \
 	$(RESOURCE_DIR)/config.yml
-REPO_TREE_URL := https://gitlab.com/digital-fracture/itelma-backend/-/raw/main
+REPO_TREE_URL := https://gitlab.com/digital-fracture/itelma-deploy/-/raw/main
 
 SOURCE_CODE_DIR := app
 
@@ -22,7 +22,7 @@ restart: stop prod
 redev: stop dev
 
 
-setup: install-all setup-env
+setup: install-all setup-env setup-frontend
 
 setup-once: .setup.stamp
 
@@ -66,3 +66,8 @@ setup-env: $(DEPLOY_DIR)/.env
 $(DEPLOY_DIR)/.env:
 	cp $(DEPLOY_DIR)/.env.example $(DEPLOY_DIR)/.env
 	nano $(DEPLOY_DIR)/.env
+
+setup-frontend:
+	git clone https://github.com/scarlettnik/lct.git
+	mv lct/dist/ ./dist
+	rm -rf lct

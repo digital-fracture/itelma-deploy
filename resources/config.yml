@@ -1,0 +1,34 @@
+medical:
+  blood_gas:
+    pH:
+      unit: ""  # empty string for unitless values
+      normal_min: 7.31
+      normal_max: 7.41
+    CO2:
+      unit: mmHg
+      normal_min: 41
+      normal_max: 51
+    Glu:
+      unit: mmol/L
+      normal_min: 4.1
+      normal_max: 5.1
+    Lac:
+      unit: mmol/L
+      normal_min: 0
+      normal_max: 2
+    BE:
+      unit: mmol/L
+      normal_min: -2
+      normal_max: 2
+
+server:
+  title: ITELMA
+  allow_origins: "*"
+  openapi_tags:
+    - patients
+    - examinations
+    - emulation
+
+logfire:
+  service_name: backend
+  environment: prod
